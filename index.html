@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThoughtSpace — Blog Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">✦</span> ThoughtSpace</a>
+    <nav><a href="#feed">Explore</a><a href="#write">Write a post</a></nav>
+    <div class="avatar" title="Your profile">Y</div>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow">A SPACE FOR YOUR IDEAS</p>
+      <h1>Stories worth<br><span>sharing.</span></h1>
+      <p class="intro-copy">Share what you're learning, what you're building, and what inspires you.</p>
+      <a class="primary-link" href="#write">Create a post <span>↗</span></a>
+      <div class="intro-stats"><div><strong id="post-count">0</strong><small>Stories</small></div><div><strong>Open</strong><small>Community</small></div></div>
+    </section>
+
+    <section class="content">
+      <section class="composer card" id="write">
+        <div class="section-heading"><div><p class="eyebrow">YOUR CORNER OF THE INTERNET</p><h2>Write something</h2></div><span class="write-icon">✎</span></div>
+        <form id="post-form">
+          <label for="author">Your name</label>
+          <input id="author" maxlength="40" placeholder="e.g. Sreeja" required>
+          <label for="title">Post title</label>
+          <input id="title" maxlength="100" placeholder="Give your story a title..." required>
+          <label for="body">Your story</label>
+          <textarea id="body" rows="4" maxlength="5000" placeholder="What would you like to share?" required></textarea>
+          <div class="form-bottom"><span class="hint">Be kind. Share generously.</span><button class="button" type="submit">Publish story <span>→</span></button></div>
+        </form>
+      </section>
+
+      <section class="feed" id="feed">
+        <div class="feed-heading"><div><p class="eyebrow">FROM THE COMMUNITY</p><h2>Latest stories</h2></div><span class="live-pill"><i></i> Community feed</span></div>
+        <div id="posts" class="posts"></div>
+        <div id="empty-state" class="empty card"><div class="empty-icon">✧</div><h3>Your feed starts here</h3><p>Publish the first story and start a conversation.</p></div>
+      </section>
+    </section>
+  </main>
+  <footer><span>✦ ThoughtSpace</span><span>Made for curious minds.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
